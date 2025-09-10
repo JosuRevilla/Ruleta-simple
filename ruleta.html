@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ruleta dinámica (base + editar valores)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="wheel-wrap">
+            <div class="wheel-container">
+                <div class="pointer" aria-hidden="true"></div>
+
+                <div class="wheel" id="wheel" role="img" aria-label="Ruleta">
+                    <div class="labels" id="labels" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <div style="display:flex;gap:8px;align-items:center;">
+                <button id="spinBtn">Girar</button>
+                <button id="resetBtn" title="Volver a valores por defecto" style="background:#666;">Reset</button>
+            </div>
+
+            <div id="resultado">Resultado: —</div>
+        </div>
+
+        <div class="controls" aria-label="Controles ruleta">
+            <h3>Valores de la ruleta</h3>
+
+            <div class="add-row">
+                <input id="newValue" placeholder="Añadir valor (texto o número)" />
+                <button id="addBtn">Añadir</button>
+            </div>
+
+            <div class="list" id="valuesList"></div>
+
+            <div style="font-size:12px; color:#666; margin-top:8px;">
+                Los sectores son iguales por defecto. Puedes añadir, editar o eliminar valores.
+            </div>
+        </div>
+    </div>
+</body>
+<script src="mainScript.js"></script>
+</html>
